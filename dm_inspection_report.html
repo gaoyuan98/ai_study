@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>达梦数据库巡检报告</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+        h1 { color: #333; text-align: center; }
+        h2 { color: #555; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { padding: 10px; text-align: left; border: 1px solid #ddd; }
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .no-data { color: #888; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>达梦数据库巡检报告</h1>
+
+    <h2>1. 数据库版本</h2>
+    <table>
+        <tr><th>BANNER</th></tr>
+        <tr><td>DM Database Server 64 V8</td></tr>
+        <tr><td>DB Version: 0x7000d</td></tr>
+        <tr><td>03134284555-20251126-303827-20151</td></tr>
+        <tr><td>Msg Version: 1</td></tr>
+        <tr><td>Gsu level(5) cnt: 102</td></tr>
+    </table>
+
+    <h2>2. 表空间使用情况</h2>
+    <table>
+        <tr><th>TABLESPACE_NAME</th><th>TOTAL_SIZE</th><th>FREE_SIZE</th><th>USED_PERCENT</th></tr>
+        <tr><td>IDX_GSTZDA</td><td>1073741824</td><td>1005584384</td><td>6.35</td></tr>
+        <tr><td>TEMP</td><td>134217728</td><td>63963136</td><td>52.34</td></tr>
+        <tr><td>SYSTEM</td><td>268435456</td><td>41943040</td><td>84.38</td></tr>
+        <tr><td>ROLL</td><td>134217728</td><td>53477376</td><td>60.16</td></tr>
+        <tr><td>DATA_GSTZDA</td><td>1073741824</td><td>1001390080</td><td>6.74</td></tr>
+        <tr><td>MAIN</td><td>5033164800</td><td>59768832</td><td>98.81</td></tr>
+    </table>
+
+    <h2>3. 当前会话数</h2>
+    <table>
+        <tr><th>CURRENT_SESSIONS</th></tr>
+        <tr><td>2</td></tr>
+    </table>
+
+    <h2>4. 锁信息</h2>
+    <table>
+        <tr><th>ADDR</th><th>TRX_ID</th><th>LTYPE</th><th>LMODE</th><th>BLOCKED</th><th>TABLE_ID</th><th>ROW_IDX</th><th>TID</th><th>IGN_FLAG</th><th>HLCK_EP</th><th>SPT_NO</th><th>THRD_ID</th><th>HASH_VALUE</th></tr>
+        <tr><td>140619215268816</td><td>0</td><td>OBJECT</td><td>IS</td><td>0</td><td>150994945</td><td>0</td><td>288865</td><td>1</td><td>255</td><td>2</td><td>7740</td><td>353</td></tr>
+        <tr><td>140619235540664</td><td>288887</td><td>OBJECT</td><td>IS</td><td>0</td><td>150994945</td><td>0</td><td>288887</td><td>1</td><td>255</td><td>2</td><td>7809</td><td>353</td></tr>
+        <tr><td>140619215268984</td><td>0</td><td>OBJECT</td><td>IS</td><td>0</td><td>150994944</td><td>0</td><td>288865</td><td>1</td><td>255</td><td>2</td><td>7740</td><td>354</td></tr>
+        <tr><td>140619235540832</td><td>288887</td><td>OBJECT</td><td>IS</td><td>0</td><td>150994944</td><td>0</td><td>288887</td><td>1</td><td>255</td><td>2</td><td>7809</td><td>354</td></tr>
+        <tr><td>140619215269152</td><td>0</td><td>OBJECT</td><td>IS</td><td>0</td><td>0</td><td>0</td><td>288865</td><td>1</td><td>255</td><td>2</td><td>7740</td><td>7716</td></tr>
+    </table>
+
+    <h2>5. 慢 SQL（执行时间 > 1 秒）</h2>
+    <p class="no-data">暂无慢 SQL 记录。</p>
+
+</body>
+</html>
