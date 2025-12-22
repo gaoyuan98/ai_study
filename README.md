@@ -8,7 +8,7 @@
 ## 项目简介
 - 该项目实现了一个兼容 ReAct 思考-行动-反馈循环的命令行 Agent，围绕 `agent.go` 中的入口函数启动，与 `react_agent.go` 内部逻辑协同，利用 `github.com/openai/openai-go` 客户端访问阿里云 DashScope 的 Qwen 模型（默认 `qwen3-max`）。
 - Agent 在运行时会渲染 `prompt_template.go` 中的系统提示词，公开 `tools.go` 定义的多种工具（读写文件、终端命令、达梦数据库查询等），并将每轮对话及工具调用通过 `logger.go` 写入控制台与 `agent_run_时间戳.log`。
-
+- 文章链接：https://mp.weixin.qq.com/s/B7Z_phcccBRvzr9Nb1EajQ
 ## 主要文件
 - `agent.go`：命令行入口，负责解析参数、加载 `.env`、初始化模型客户端、拼装工具并触发 Agent 流程。
 - `react_agent.go`：封装 ReAct 流程（提示词渲染、消息循环、工具调度、日志记录与用户确认）。
@@ -100,4 +100,3 @@
 > 微信公众号：**达梦课代表**  
 > 分享DM数据库一线遇到的各类问题和解决方案
 
-链接：https://mp.weixin.qq.com/s/B7Z_phcccBRvzr9Nb1EajQ
