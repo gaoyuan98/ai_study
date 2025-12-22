@@ -4,14 +4,6 @@
 
 # go_agent_study
 
-### 技术支持
-
-<img src="./gzh01.png"  alt="达梦课代表公众号" />
-
-> 微信公众号：**达梦课代表**  
-> 分享DM数据库一线遇到的各类问题和解决方案
-
-链接：https://mp.weixin.qq.com/s/B7Z_phcccBRvzr9Nb1EajQ
 
 ## 项目简介
 - 该项目实现了一个兼容 ReAct 思考-行动-反馈循环的命令行 Agent，围绕 `agent.go` 中的入口函数启动，与 `react_agent.go` 内部逻辑协同，利用 `github.com/openai/openai-go` 客户端访问阿里云 DashScope 的 Qwen 模型（默认 `qwen3-max`）。
@@ -100,3 +92,12 @@
 - 每轮交互都会在日志中输出 `<thought>`、`<action>`、`<observation>`，可通过 `agent_run_*.log` 回放。
 - 若终端命令或数据库连接失败，日志会包含详细报错信息，可据此重试。
 - 当模型响应缺少 `<action>` 或参数校验未通过时，Agent 会立即在控制台提示；通常是因为提示词或 Key/DSN 未正确配置。
+
+## 技术支持
+
+<img src="./gzh01.png"  alt="达梦课代表公众号" />
+
+> 微信公众号：**达梦课代表**  
+> 分享DM数据库一线遇到的各类问题和解决方案
+
+链接：https://mp.weixin.qq.com/s/B7Z_phcccBRvzr9Nb1EajQ
