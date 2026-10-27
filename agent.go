@@ -46,7 +46,7 @@ func loadEnvFile(path string) error {
 // main 负责解析命令行、加载配置并启动 ReAct Agent。
 func main() {
 	projectDir := flag.String("project", ".", "项目根目录")
-	model := flag.String("model", "qwen3-max", "模型名称")
+	model := flag.String("model", "", "模型名称")
 	questionFlag := flag.String("question", "", "直接传入问题，留空则交互式输入")
 	logFileFlag := flag.String("log-file", "", "日志输出文件路径（默认写入项目目录 agent_run_时间.log）")
 	flag.Parse()
